@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BookStore - Discover Your Next Great Book</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-book-open"></i>
+                BookStore
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+
+                <button id="dark-mode-btn" class="dark-btn">
+                    🌙 Dark Mode
+                </button>
+
+                <button id="cart-btn" class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Cart (<span id="cart-count">0</span>)
+                </button>
+
+                <button id="menu-btn" class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="hero-small-text">
+                WELCOME TO BOOKSTORE
+            </p>
+
+            <h1>
+                Discover Your Next Great Book
+            </h1>
+
+            <p>
+                Explore our collection of inspiring stories,
+                timeless classics and life-changing books.
+            </p>
+
+            <a href="#books" class="hero-btn">
+                Explore Books
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=80"
+                alt="Books">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SEARCH SECTION ================= -->
+
+    <section class="search-section">
+
+        <div class="section-heading">
+
+            <p>SEARCH</p>
+
+            <h2>Find Your Favorite Book</h2>
+
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search books by title or author...">
+
+            <button id="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BOOKS SECTION ================= -->
+
+    <section class="books-section" id="books">
+
+        <div class="section-heading">
+
+            <p>OUR COLLECTION</p>
+
+            <h2>Popular Books</h2>
+
+            <span>
+                Discover books that inspire, educate and entertain.
+            </span>
+
+        </div>
+
+        <!-- Books JavaScript se yahan generate hongi -->
+
+        <div
+            class="books-container"
+            id="books-container">
+        </div>
+
+    </section>
+
+
+    <!-- ================= CART SECTION ================= -->
+
+    <section class="cart-section" id="cart">
+
+        <div class="section-heading">
+
+            <p>SHOPPING CART</p>
+
+            <h2>Your Cart</h2>
+
+        </div>
+
+        <div
+            class="cart-container"
+            id="cart-container">
+
+            <p id="empty-cart-message">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+        <div class="cart-summary">
+
+            <h3>
+                Total:
+                Rs. <span id="cart-total">0</span>
+            </h3>
+
+            <button id="clear-cart-btn">
+                <i class="fa-solid fa-trash"></i>
+                Clear Cart
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section class="about-section" id="about">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=900&q=80"
+                alt="Library">
+
+        </div>
+
+        <div class="about-content">
+
+            <p class="section-label">
+                ABOUT US
+            </p>
+
+            <h2>
+                A Place For Every Book Lover
+            </h2>
+
+            <p>
+                BookStore is an online bookstore created for people
+                who love reading and discovering new ideas.
+            </p>
+
+            <p>
+                From fiction and self-help to business and personal
+                development, we bring a wide variety of books together
+                in one simple place.
+            </p>
+
+            <div class="about-features">
+
+                <div>
+                    <i class="fa-solid fa-book"></i>
+                    <h3>Wide Collection</h3>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-truck"></i>
+                    <h3>Easy Shopping</h3>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-heart"></i>
+                    <h3>Book Lovers</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="contact-section" id="contact">
+
+        <div class="section-heading">
+
+            <p>GET IN TOUCH</p>
+
+            <h2>Contact Us</h2>
+
+            <span>
+                Have a question? Send us a message.
+            </span>
+
+        </div>
+
+        <form id="contact-form">
+
+            <div class="form-group">
+
+                <label for="name">
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Write your message"></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="submit-btn">
+
+                Send Message
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+            <!-- JS message -->
+
+            <p id="form-message"></p>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-column">
+
+                <a href="#home" class="footer-logo">
+                    <i class="fa-solid fa-book-open"></i>
+                    BookStore
+                </a>
+
+                <p>
+                    Discover your next great book and
+                    make reading a part of your everyday life.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="#home">Home</a>
+                <a href="#books">Books</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Follow Us
+                </h3>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                &copy; 2026 BookStore. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
